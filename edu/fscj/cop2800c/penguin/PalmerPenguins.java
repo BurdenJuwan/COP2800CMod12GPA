@@ -1,9 +1,12 @@
 // PalmerPenguins.java
-// D. Singletary
-// 3/14/25
+// Juwan Burden
+// 11/22/26
 // Palmer Penguins application
 
 package edu.fscj.cop2800c.penguin;
+
+import java.util.ArrayList;
+import edu.fscj.cop2800c.util.DataWrapper;
 
 public class PalmerPenguins {
     public static void main(String[] args) {
@@ -103,6 +106,25 @@ public class PalmerPenguins {
                 System.out.println(e + ": sample = " + sample);
             }
         }
+        // Instantiate a new ArrayList of DataWrapper<Penguin> objects
+        ArrayList<DataWrapper<Penguin>> wrappedPenguins = new ArrayList<>();
+
+        // Loop to extract a subset of the PenguinAnalyzer's data
+        for (int sample = 1; sample <= 8; sample++) {
+            // Get a penguin
+            Penguin p = analyzer.getPenguinBySampleNum(sample);
+    
+            // Wrap the penguin in a DataWrapper object
+            DataWrapper<Penguin> wrapped = new DataWrapper<>(p);
         
+            // Add the DataWrapper object to the ArrayList
+            wrappedPenguins.add(wrapped);
+        }
+
+        // If the ArrayList is not empty, call the DataWrapper's displayList method
+        if (!wrappedPenguins.isEmpty()) {
+            System.out.println("Data Wrapper List: ");
+            DataWrapper.displayList(wrappedPenguins);
+        }
     }
 }

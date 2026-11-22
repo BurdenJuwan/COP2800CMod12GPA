@@ -1,6 +1,6 @@
 // Penguin.java
-// D. Singletary
-// 3/15/25
+// Juwan Burden
+// 11/22/26
 // Represents a Palmer Penguin
 
 package edu.fscj.cop2800c.penguin;
