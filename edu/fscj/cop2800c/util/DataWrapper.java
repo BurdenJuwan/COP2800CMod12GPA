@@ -1,7 +1,7 @@
 // DataWrapper.java
 // Juwan Burden
 // 11/22/26
-// 
+// Generic DataWrapper for Birds and Penguins
 
 package edu.fscj.cop2800c.util;
 
